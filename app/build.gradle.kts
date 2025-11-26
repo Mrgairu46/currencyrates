@@ -25,6 +25,8 @@ android {
             )
         }
     }
+
+    // Your project uses Java 11
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -33,10 +35,15 @@ android {
 
 dependencies {
 
+    // Dependencies from version catalog
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+
+    // 🔥 IMPORTANT: Add JSON parser for Parser.java
+    implementation("org.json:json:20231013")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
